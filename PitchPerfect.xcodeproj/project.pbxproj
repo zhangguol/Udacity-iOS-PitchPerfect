@@ -11,12 +11,14 @@
 		B201195E1E57CA3200F4A99B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B201195C1E57CA3200F4A99B /* Main.storyboard */; };
 		B20119601E57CA3200F4A99B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B201195F1E57CA3200F4A99B /* Assets.xcassets */; };
 		B20119631E57CA3200F4A99B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20119611E57CA3200F4A99B /* LaunchScreen.storyboard */; };
-		B201196E1E57CA3200F4A99B /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201196D1E57CA3200F4A99B /* PitchPerfectTests.swift */; };
 		B201197D1E57CE9D00F4A99B /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201197C1E57CE9D00F4A99B /* AlertPresentable.swift */; };
 		B201197F1E57CEAC00F4A99B /* ViewControllerPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201197E1E57CEAC00F4A99B /* ViewControllerPresentable.swift */; };
 		B20119811E57D3DE00F4A99B /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20119801E57D3DE00F4A99B /* PlaySoundsViewController.swift */; };
 		B20119831E57D59800F4A99B /* SeguePreformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20119821E57D59800F4A99B /* SeguePreformable.swift */; };
 		B20119851E57D82500F4A99B /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20119841E57D82500F4A99B /* RecordSoundsViewController.swift */; };
+		B229EB431E59A1A50086600E /* RecordSoundViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B229EB421E59A1A50086600E /* RecordSoundViewControllerTests.swift */; };
+		B229EB461E59A55B0086600E /* FakePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B229EB451E59A55B0086600E /* FakePresenter.swift */; };
+		B229EB481E59A6060086600E /* FakeSeguePerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B229EB471E59A6060086600E /* FakeSeguePerformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +39,15 @@
 		B20119621E57CA3200F4A99B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B20119641E57CA3200F4A99B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B20119691E57CA3200F4A99B /* PitchPerfectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPerfectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B201196D1E57CA3200F4A99B /* PitchPerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectTests.swift; sourceTree = "<group>"; };
 		B201196F1E57CA3200F4A99B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B201197C1E57CE9D00F4A99B /* AlertPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		B201197E1E57CEAC00F4A99B /* ViewControllerPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPresentable.swift; sourceTree = "<group>"; };
 		B20119801E57D3DE00F4A99B /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		B20119821E57D59800F4A99B /* SeguePreformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguePreformable.swift; sourceTree = "<group>"; };
 		B20119841E57D82500F4A99B /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
+		B229EB421E59A1A50086600E /* RecordSoundViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSoundViewControllerTests.swift; sourceTree = "<group>"; };
+		B229EB451E59A55B0086600E /* FakePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePresenter.swift; sourceTree = "<group>"; };
+		B229EB471E59A6060086600E /* FakeSeguePerformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSeguePerformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,8 @@
 		B201196C1E57CA3200F4A99B /* PitchPerfectTests */ = {
 			isa = PBXGroup;
 			children = (
-				B201196D1E57CA3200F4A99B /* PitchPerfectTests.swift */,
+				B229EB441E59A5400086600E /* Utils */,
+				B229EB421E59A1A50086600E /* RecordSoundViewControllerTests.swift */,
 				B201196F1E57CA3200F4A99B /* Info.plist */,
 			);
 			path = PitchPerfectTests;
@@ -112,6 +117,15 @@
 				B201197C1E57CE9D00F4A99B /* AlertPresentable.swift */,
 				B20119821E57D59800F4A99B /* SeguePreformable.swift */,
 				B201197E1E57CEAC00F4A99B /* ViewControllerPresentable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B229EB441E59A5400086600E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B229EB451E59A55B0086600E /* FakePresenter.swift */,
+				B229EB471E59A6060086600E /* FakeSeguePerformer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -172,6 +186,7 @@
 					B20119681E57CA3200F4A99B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = F6ANNS7CW7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B20119541E57CA3200F4A99B;
 					};
@@ -234,7 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B201196E1E57CA3200F4A99B /* PitchPerfectTests.swift in Sources */,
+				B229EB431E59A1A50086600E /* RecordSoundViewControllerTests.swift in Sources */,
+				B229EB481E59A6060086600E /* FakeSeguePerformer.swift in Sources */,
+				B229EB461E59A55B0086600E /* FakePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,11 +409,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6ANNS7CW7;
 				INFOPLIST_FILE = PitchPerfectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PitchPerfectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PitchPerfect.app/PitchPerfect";
 			};
@@ -407,6 +426,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6ANNS7CW7;
 				INFOPLIST_FILE = PitchPerfectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -436,6 +456,7 @@
 				B20119741E57CA3200F4A99B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B20119751E57CA3200F4A99B /* Build configuration list for PBXNativeTarget "PitchPerfectTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +465,7 @@
 				B20119771E57CA3200F4A99B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
