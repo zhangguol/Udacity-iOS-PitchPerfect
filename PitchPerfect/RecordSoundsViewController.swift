@@ -32,7 +32,26 @@ class RecordSoundsViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func recordAudio(_ sender: UIButton) {
         configure(viewState: .recording)
+        startRecording()
+    }
 
+    @IBAction func stopRecording(_ sender: UIButton) {
+        configure(viewState: .notRecording)
+
+        audioRecorder?.stop()
+        try? AVAudioSession.sharedInstance().setActive(false)
+    }
+
+    // MARK: Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case SegueIdentifier.stopRecording?:
+            (segue.destination as? PlaySoundsViewController)?.recordedAudioURL = sender as? URL
+        default: break
+        }
+    }
+    
+    private func startRecording() {
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                                           .userDomainMask,
                                                           true)[0]
@@ -56,22 +75,7 @@ class RecordSoundsViewController: UIViewController {
         } catch let error {
             showErrorAlert(with: "Cannot record audio, please try again\n\(error.localizedDescription)")
         }
-    }
-
-    @IBAction func stopRecording(_ sender: UIButton) {
-        configure(viewState: .notRecording)
-
-        audioRecorder?.stop()
-        try? AVAudioSession.sharedInstance().setActive(false)
-    }
-
-    // MARK: Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case SegueIdentifier.stopRecording?:
-            (segue.destination as? PlaySoundsViewController)?.recordedAudioURL = sender as? URL
-        default: break
-        }
+        
     }
 }
 
